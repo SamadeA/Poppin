@@ -38,9 +38,7 @@ class HomeMapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
             
-            
         }
-       
         
     }
     
@@ -59,7 +57,15 @@ class HomeMapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
         newPin.coordinate = location.coordinate
         mapView.addAnnotation(newPin)
         
+        let annotation3 = Annotation()
+        annotation3.coordinate = CLLocationCoordinate2D(latitude: 1.0, longitude:  0.0)
+        annotation3.custom_image = false
+        annotation3.color = MKPinAnnotationColor.green
+        mapView.addAnnotation(annotation3)
     }
+    
+    
+    
     
     
     @IBAction func poppinButton(_ sender: Any) {
@@ -106,9 +112,19 @@ class HomeMapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
                 
             }
         }
-    
     }
     
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let annotationView = MKPinAnnotationView()
+        annotationView.pinTintColor = .blue
+        return annotationView
+    }
     
+    class Annotation: NSObject, MKAnnotation
+    {
+        var coordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)
+        var custom_image: Bool = true
+        var color: MKPinAnnotationColor = MKPinAnnotationColor.purple
+    }
     
 }

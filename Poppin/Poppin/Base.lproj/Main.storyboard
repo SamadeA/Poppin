@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,182 +19,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KS6-yQ-eRD">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rIy-bt-gUc">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OlM-lw-FTk">
-                                            <rect key="frame" x="25" y="186" width="324" height="30"/>
-                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Hnp-7h-a5D">
-                                                <rect key="frame" x="0.0" y="0.0" width="324" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            </view>
-                                            <blurEffect style="light"/>
-                                        </visualEffectView>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username " textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g6b-b3-n4o">
-                                            <rect key="frame" x="25" y="186" width="324" height="30"/>
-                                            <nil key="textColor"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
-                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mtY-BE-4bd">
-                                            <rect key="frame" x="25" y="245" width="324" height="30"/>
-                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0zB-cl-qlL">
-                                                <rect key="frame" x="0.0" y="0.0" width="324" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fZr-qj-7JL">
-                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                                    </textField>
-                                                </subviews>
-                                            </view>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="30" id="DQ9-Rx-zli"/>
-                                            </constraints>
-                                            <blurEffect style="light"/>
-                                        </visualEffectView>
-                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SnT-jz-4j7">
-                                            <rect key="frame" x="25" y="308" width="135" height="30"/>
-                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0n0-kG-x0k">
-                                                <rect key="frame" x="0.0" y="0.0" width="135" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <subviews>
-                                                    <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IXN-VW-yVr">
-                                                        <rect key="frame" x="0.0" y="0.0" width="135" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="yd1-Qx-a3R">
-                                                            <rect key="frame" x="0.0" y="0.0" width="135" height="30"/>
-                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                        </view>
-                                                        <vibrancyEffect>
-                                                            <blurEffect style="light"/>
-                                                        </vibrancyEffect>
-                                                    </visualEffectView>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxO-WN-UWx">
-                                                        <rect key="frame" x="0.0" y="0.0" width="135" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <state key="normal" title="Sign Up">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="signupButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0c8-EE-Y9v"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </view>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="135" id="c0Q-MF-bC6"/>
-                                                <constraint firstAttribute="height" constant="30" id="lh6-au-xWn"/>
-                                            </constraints>
-                                            <blurEffect style="light"/>
-                                        </visualEffectView>
-                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Sa-gP-1sv">
-                                            <rect key="frame" x="214" y="308" width="135" height="30"/>
-                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lfP-pg-t5D">
-                                                <rect key="frame" x="0.0" y="0.0" width="135" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <subviews>
-                                                    <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lPf-yu-KjF">
-                                                        <rect key="frame" x="0.0" y="0.0" width="135" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="zlI-wX-wjC">
-                                                            <rect key="frame" x="0.0" y="0.0" width="135" height="30"/>
-                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                        </view>
-                                                        <vibrancyEffect>
-                                                            <blurEffect style="light"/>
-                                                        </vibrancyEffect>
-                                                    </visualEffectView>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nn5-HB-ElV">
-                                                        <rect key="frame" x="0.0" y="0.0" width="135" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <state key="normal" title="Sign In">
-                                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="signinButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GFB-ti-GCw"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </view>
-                                            <blurEffect style="light"/>
-                                        </visualEffectView>
-                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9X-Pv-fs9">
-                                            <rect key="frame" x="105" y="71" width="164" height="33"/>
-                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8s1-F7-NFG">
-                                                <rect key="frame" x="0.0" y="0.0" width="164" height="33"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <subviews>
-                                                    <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CP7-xY-jJt">
-                                                        <rect key="frame" x="0.0" y="0.0" width="164" height="33"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="UnE-Dw-geU">
-                                                            <rect key="frame" x="0.0" y="0.0" width="164" height="33"/>
-                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Poppin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYb-We-3aj">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="164" height="33"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </view>
-                                                        <vibrancyEffect>
-                                                            <blurEffect style="light"/>
-                                                        </vibrancyEffect>
-                                                    </visualEffectView>
-                                                </subviews>
-                                            </view>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="164" id="sm5-LG-Hoa"/>
-                                            </constraints>
-                                            <blurEffect style="light"/>
-                                        </visualEffectView>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
-                                    <constraints>
-                                        <constraint firstItem="OlM-lw-FTk" firstAttribute="top" secondItem="g6b-b3-n4o" secondAttribute="top" id="4oE-l7-GMh"/>
-                                        <constraint firstItem="OlM-lw-FTk" firstAttribute="top" secondItem="H9X-Pv-fs9" secondAttribute="bottom" constant="82" id="9C0-NP-CwE"/>
-                                        <constraint firstItem="SnT-jz-4j7" firstAttribute="top" secondItem="1Sa-gP-1sv" secondAttribute="top" id="BaA-gM-H2d"/>
-                                        <constraint firstItem="mtY-BE-4bd" firstAttribute="leading" secondItem="SnT-jz-4j7" secondAttribute="leading" id="Cme-eo-l4h"/>
-                                        <constraint firstItem="mtY-BE-4bd" firstAttribute="trailing" secondItem="1Sa-gP-1sv" secondAttribute="trailing" id="ESo-DF-qtH"/>
-                                        <constraint firstItem="SnT-jz-4j7" firstAttribute="centerY" secondItem="rIy-bt-gUc" secondAttribute="centerY" id="KtW-7A-Jwz"/>
-                                        <constraint firstItem="1Sa-gP-1sv" firstAttribute="leading" secondItem="SnT-jz-4j7" secondAttribute="trailing" constant="54" id="MEE-FK-jyS"/>
-                                        <constraint firstItem="OlM-lw-FTk" firstAttribute="leading" secondItem="rIy-bt-gUc" secondAttribute="leading" constant="25" id="OCs-Gm-HHR"/>
-                                        <constraint firstItem="SnT-jz-4j7" firstAttribute="top" secondItem="mtY-BE-4bd" secondAttribute="bottom" constant="33" id="Q6Z-Nv-tXe"/>
-                                        <constraint firstItem="H9X-Pv-fs9" firstAttribute="centerX" secondItem="g6b-b3-n4o" secondAttribute="centerX" id="T2h-Lz-daM"/>
-                                        <constraint firstItem="g6b-b3-n4o" firstAttribute="leading" secondItem="OlM-lw-FTk" secondAttribute="leading" id="YJ0-7H-yHJ"/>
-                                        <constraint firstItem="g6b-b3-n4o" firstAttribute="trailing" secondItem="mtY-BE-4bd" secondAttribute="trailing" id="aWg-bk-85v"/>
-                                        <constraint firstItem="H9X-Pv-fs9" firstAttribute="top" secondItem="rIy-bt-gUc" secondAttribute="top" constant="71" id="aiL-hE-hT6"/>
-                                        <constraint firstItem="g6b-b3-n4o" firstAttribute="leading" secondItem="mtY-BE-4bd" secondAttribute="leading" id="auu-ZY-7q3"/>
-                                        <constraint firstItem="H9X-Pv-fs9" firstAttribute="centerX" secondItem="rIy-bt-gUc" secondAttribute="centerX" id="bxi-9E-SdV"/>
-                                        <constraint firstItem="SnT-jz-4j7" firstAttribute="bottom" secondItem="1Sa-gP-1sv" secondAttribute="bottom" id="cDo-kb-4Nh"/>
-                                        <constraint firstItem="OlM-lw-FTk" firstAttribute="bottom" secondItem="g6b-b3-n4o" secondAttribute="bottom" id="dOV-lz-HDo"/>
-                                        <constraint firstItem="OlM-lw-FTk" firstAttribute="trailing" secondItem="g6b-b3-n4o" secondAttribute="trailing" id="jMA-Ml-eQg"/>
-                                        <constraint firstItem="mtY-BE-4bd" firstAttribute="top" secondItem="OlM-lw-FTk" secondAttribute="bottom" constant="29" id="skQ-k0-P7q"/>
-                                    </constraints>
-                                </view>
-                                <blurEffect style="light"/>
-                            </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poppin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYb-We-3aj">
+                                <rect key="frame" x="120" y="36" width="135" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username " textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g6b-b3-n4o">
+                                <rect key="frame" x="30" y="97" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fZr-qj-7JL">
+                                <rect key="frame" x="30" y="159" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxO-WN-UWx">
+                                <rect key="frame" x="30" y="221" width="142" height="32"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="kcM-O5-3qn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="signupButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0c8-EE-Y9v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nn5-HB-ElV">
+                                <rect key="frame" x="202" y="221" width="142" height="32"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="eZ7-M5-Cfb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="signinButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GFB-ti-GCw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.78157383420000004" green="0.78157383420000004" blue="0.78157383420000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="KS6-yQ-eRD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HD4-t5-WQb"/>
-                            <constraint firstItem="KS6-yQ-eRD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-647" id="INt-2J-8o0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KS6-yQ-eRD" secondAttribute="trailing" id="IYP-bi-IgT"/>
-                            <constraint firstItem="KS6-yQ-eRD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QaB-yD-dFZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KS6-yQ-eRD" secondAttribute="bottom" id="VZ2-Q1-fb4"/>
-                            <constraint firstItem="KS6-yQ-eRD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-375" id="YDP-w0-hdi"/>
+                            <constraint firstItem="TxO-WN-UWx" firstAttribute="top" secondItem="fZr-qj-7JL" secondAttribute="bottom" constant="32" id="2wo-6v-j5K"/>
+                            <constraint firstItem="g6b-b3-n4o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="6ym-oP-sJ3"/>
+                            <constraint firstItem="aYb-We-3aj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="FIe-J9-5z4"/>
+                            <constraint firstItem="g6b-b3-n4o" firstAttribute="top" secondItem="aYb-We-3aj" secondAttribute="bottom" constant="32" id="QQr-ih-f4t"/>
+                            <constraint firstItem="fZr-qj-7JL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="RR8-5z-Nou"/>
+                            <constraint firstItem="TxO-WN-UWx" firstAttribute="width" secondItem="fZr-qj-7JL" secondAttribute="width" multiplier="0.45" id="T69-dB-bYm"/>
+                            <constraint firstItem="fZr-qj-7JL" firstAttribute="top" secondItem="g6b-b3-n4o" secondAttribute="bottom" constant="32" id="V4K-TQ-ZfR"/>
+                            <constraint firstItem="TxO-WN-UWx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="VTZ-sn-PGY"/>
+                            <constraint firstItem="aYb-We-3aj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Whs-hg-JwG"/>
+                            <constraint firstItem="fZr-qj-7JL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b68-36-1Fg"/>
+                            <constraint firstItem="nn5-HB-ElV" firstAttribute="top" secondItem="fZr-qj-7JL" secondAttribute="bottom" constant="32" id="dZt-yp-F5D"/>
+                            <constraint firstItem="aYb-We-3aj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="igd-Dh-CHy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nn5-HB-ElV" secondAttribute="trailing" constant="31" id="jMx-Lv-Esb"/>
+                            <constraint firstItem="g6b-b3-n4o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tP3-OC-agr"/>
+                            <constraint firstItem="nn5-HB-ElV" firstAttribute="width" secondItem="TxO-WN-UWx" secondAttribute="width" id="w43-w2-8D1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -206,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-847" y="32"/>
+            <point key="canvasLocation" x="-847.20000000000005" y="31.934032983508249"/>
         </scene>
         <!--Home MapVC-->
         <scene sceneID="KhO-An-RRK">
@@ -219,46 +108,27 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hpM-QS-YHg">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gEE-qH-0GN">
-                                <rect key="frame" x="16" y="596" width="343" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="bLX-67-fe0">
-                                    <rect key="frame" x="0.0" y="0.0" width="343" height="51"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DHM-rF-M2H">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="51"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="d5A-Wg-mdH">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="51"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            </view>
-                                            <vibrancyEffect>
-                                                <blurEffect style="light"/>
-                                            </vibrancyEffect>
-                                        </visualEffectView>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wA5-yd-YPZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="51"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                            <state key="normal" title="Poppin">
-                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="poppinButton:" destination="epj-rv-Tcq" eventType="touchUpInside" id="K3E-wl-aRT"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                </view>
-                                <blurEffect style="light"/>
-                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wA5-yd-YPZ">
+                                <rect key="frame" x="0.0" y="596" width="375" height="51"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Poppin">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="poppinButton:" destination="epj-rv-Tcq" eventType="touchUpInside" id="K3E-wl-aRT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="wA5-yd-YPZ" secondAttribute="bottom" constant="20" symbolic="YES" id="1PQ-qb-ZhY"/>
                             <constraint firstItem="hpM-QS-YHg" firstAttribute="leading" secondItem="fYu-qO-fbI" secondAttribute="leading" id="Rg9-Gi-AkR"/>
                             <constraint firstItem="hpM-QS-YHg" firstAttribute="trailing" secondItem="fYu-qO-fbI" secondAttribute="trailing" id="bMb-x3-wtN"/>
+                            <constraint firstItem="wA5-yd-YPZ" firstAttribute="leading" secondItem="hpM-QS-YHg" secondAttribute="leading" id="cgH-Rs-Ug1"/>
+                            <constraint firstItem="wA5-yd-YPZ" firstAttribute="trailing" secondItem="hpM-QS-YHg" secondAttribute="trailing" id="gQK-Uq-FLv"/>
                             <constraint firstItem="hpM-QS-YHg" firstAttribute="top" secondItem="SAg-ig-ncg" secondAttribute="top" id="qeg-0v-TCt"/>
+                            <constraint firstItem="wA5-yd-YPZ" firstAttribute="top" secondItem="fYu-qO-fbI" secondAttribute="top" constant="576" id="rCf-GT-9ym"/>
                             <constraint firstItem="hpM-QS-YHg" firstAttribute="bottom" secondItem="fYu-qO-fbI" secondAttribute="bottom" id="yPV-CD-LUh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fYu-qO-fbI"/>
