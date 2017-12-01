@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		40B6086398F01E9B2042684A /* Pods_Poppin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79643ADB4C6BFA65250F14F7 /* Pods_Poppin.framework */; };
 		71FB96933FFD22D0F39744BD /* Pods_PoppinTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3F17BE6140CE1B5465FE85 /* Pods_PoppinTests.framework */; };
+		A2728A4A1FD0D44F00A74C51 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2728A491FD0D44F00A74C51 /* MapKit.framework */; };
+		A2728A4B1FD0DDCB00A74C51 /* HomeMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27EEFEE1FCCE54B00AF5BA8 /* HomeMapVC.swift */; };
+		A2728A4C1FD0DDCC00A74C51 /* HomeMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27EEFEE1FCCE54B00AF5BA8 /* HomeMapVC.swift */; };
 		A27EEF6E1FCB88BF00AF5BA8 /* SignUpAndSignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27EEF6D1FCB88BF00AF5BA8 /* SignUpAndSignInVC.swift */; };
 		A27EEFE41FCC8B6500AF5BA8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A27EEFE31FCC8B6500AF5BA8 /* GoogleService-Info.plist */; };
 		A27EEFEF1FCCE54B00AF5BA8 /* HomeMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27EEFEE1FCCE54B00AF5BA8 /* HomeMapVC.swift */; };
@@ -46,6 +49,7 @@
 		479F8EB241C9BCA7F3DB6A9C /* Pods-Poppin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poppin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Poppin/Pods-Poppin.debug.xcconfig"; sourceTree = "<group>"; };
 		5294105BCF835C867A685AA0 /* Pods-PoppinUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoppinUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoppinUITests/Pods-PoppinUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		79643ADB4C6BFA65250F14F7 /* Pods_Poppin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poppin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2728A491FD0D44F00A74C51 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A27EEF6D1FCB88BF00AF5BA8 /* SignUpAndSignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpAndSignInVC.swift; sourceTree = "<group>"; };
 		A27EEFE31FCC8B6500AF5BA8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A27EEFEE1FCCE54B00AF5BA8 /* HomeMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMapVC.swift; sourceTree = "<group>"; };
@@ -73,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2728A4A1FD0D44F00A74C51 /* MapKit.framework in Frameworks */,
 				40B6086398F01E9B2042684A /* Pods_Poppin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +174,7 @@
 		A7B81D00B993BB5E1D1001DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A2728A491FD0D44F00A74C51 /* MapKit.framework */,
 				79643ADB4C6BFA65250F14F7 /* Pods_Poppin.framework */,
 				BC3F17BE6140CE1B5465FE85 /* Pods_PoppinTests.framework */,
 				D12A02C18C18AB48B9050797 /* Pods_PoppinUITests.framework */,
@@ -255,6 +261,9 @@
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -492,6 +501,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2728A4B1FD0DDCB00A74C51 /* HomeMapVC.swift in Sources */,
 				A2A8CFCF1FC3A6F700DF28F0 /* PoppinTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,6 +510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2728A4C1FD0DDCC00A74C51 /* HomeMapVC.swift in Sources */,
 				A2A8CFDA1FC3A6F700DF28F0 /* PoppinUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

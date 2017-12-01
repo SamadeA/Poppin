@@ -12,8 +12,10 @@ import Firebase
 import FirebaseDatabase
 
 
-class HomeMapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
-
+class HomeMapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UISearchBarDelegate {
+    
+    @IBOutlet var SearchBar: UISearchBar!
+    
     var ref: DatabaseReference!
     let id = Auth.auth().currentUser?.uid
     
@@ -33,6 +35,7 @@ class HomeMapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
         ref = Database.database().reference()
         displayOtherUsers()
         self.locationManager.requestAlwaysAuthorization()
+//        SearchBar.delegate = self
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -114,11 +117,11 @@ class HomeMapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
         }
     }
     
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let annotationView = MKPinAnnotationView()
-        annotationView.pinTintColor = .blue
-        return annotationView
-    }
+//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+//        let annotationView = MKPinAnnotationView()
+//        annotationView.pinTintColor = .blue
+//        return annotationView
+//    }
     
     class Annotation: NSObject, MKAnnotation
     {
@@ -127,4 +130,54 @@ class HomeMapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
         var color: MKPinAnnotationColor = MKPinAnnotationColor.purple
     }
     
+//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+//        SearchBar.resignFirstResponder()
+//
+//        let geocoder = CLGeocoder()
+//        geocoder.geocodeAddressString(searchBar.text!) { (placemarks:[CLPlacemarks]?, err:Error) in
+//            if err == nil {
+//                let placemark = placemarks?.first
+//                let anno = MKPinAnnotation()
+//                anno.coordinate = (placemark?.location?.coordinate)!
+//                anno.title = searchBar.text!
+//                self.mapView.addAnnotation(anno)
+//                self.mapView.selectedAnnotation(anno, animated: true)
+//
+//            }else{
+//                print(error?.localizedDescription ?? "error")
+//
+//            }
+//
+//        }
+//        print("Searching...", SearchBar.text!)
+//
+//        UIApplication.shared.beginIgnoringInteractionEvents()
+//        let activityIndicator = UIActivityIndicatorView()
+//        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+//        activityIndicator.center = self.view.center
+//         activityIndicator.hidesWhenStopped = true
+//         activityIndicator.startAnimating()
+//
+//        let searchController = UISearchController(searchResultsController: nil)
+//        searchController.searchBar.delegate = self
+//        present(searchController, animated: true, completion: nil)
+//
+//        self.addSubview(activityIndicator)
+    //    }
+    @IBAction func signoutButton(_ sender: Any) {
+        
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            print("Goodbye!")
+            navigationController?.popViewController(animated: true)
+        } catch let error {
+            print("Error while signin out: %@", error)
+        }
+        
+        dismiss(animated: true)
+        
+    }
 }
+
+
