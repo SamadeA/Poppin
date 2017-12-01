@@ -146,8 +146,7 @@
                         </connections>
                     </navigationItem>
                     <connections>
-                        <outlet property="SearchBar" destination="rKj-dy-B3I" id="i1i-5Q-Z7o"/>
-                        <outlet property="mapView" destination="hpM-QS-YHg" id="oRS-47-wKt"/>
+                        <outlet property="mapView" destination="hpM-QS-YHg" id="tjh-L8-uw1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Psu-u3-jW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
